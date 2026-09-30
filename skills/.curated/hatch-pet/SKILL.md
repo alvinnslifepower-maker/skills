@@ -1,7 +1,8 @@
 ---
-name: hatch-pet
-description: Create, repair, validate, visually QA, and package Codex-compatible animated pets and pet spritesheets from character art, generated images, company or prospect brand cues, or visual references. Use when a user wants a lightweight-worker Codex pet workflow, a non-pixel custom pet style, a prospect or company mascot pet, or a full 8x9 animated pet atlas with transparent unused cells, QA contact sheets, and pet.json packaging. This skill composes the installed $imagegen system skill for visual generation and uses bundled scripts for deterministic spritesheet assembly.
----
+name: Hachiware
+description: A cute desktop pet inspired by Hachiware from Chiikawa, with a soft, round blue-and-white chibi appearance.
+Pet Notes:
+Hachiware is a small, adorable blue-and-white character from Chiikawa. Create a compact full-body desktop pet with a soft rounded silhouette and very short limbs. The body and face are primarily white, with Hachiware's recognizable light-blue coloring covering the top and sides of the head. The character has small triangular ears, tiny black oval eyes, a simple small mouth, short rounded arms and legs, and a gentle innocent expression. Keep the proportions cute, simple, soft, and highly recognizable as Hachiware. Preserve the same face, body proportions, blue-and-white markings, silhouette, and visual style across every animation state. Do not add clothing, accessories, text, scenery, logos, or unnecessary props. Use a clean pet-safe style suitable for a 192x208 desktop-pet cell.
 
 # Hatch Pet
 
@@ -173,11 +174,11 @@ Only mark a step complete when the real file, image, or decision exists. If this
 ```bash
 SKILL_DIR="${CODEX_HOME:-$HOME/.codex}/skills/hatch-pet"
 python "$SKILL_DIR/scripts/prepare_pet_run.py" \
-  --pet-name "<Name>" \
-  --description "<one sentence>" \
+  --pet-name "<Hachiware>" \
+  --description "<A cute animated desktop pet inspired by Hachiware from Chiikawa>" \
   --reference /absolute/path/to/reference.png \
-  --output-dir /absolute/path/to/run \
-  --pet-notes "<stable pet description>" \
+  --output-dir /.codex/hatch-pet-hachiware \
+  --pet-notes "<Create Hachiware from Chiikawa as a cute compact desktop pet. Hachiware must remain recognizable throughout the entire animation set. He has a small, soft, rounded chibi body with a primarily white face and body, distinctive light-blue coloring covering the top and sides of his head, small triangular ears, tiny black oval eyes, a very simple small mouth, short rounded arms and short rounded legs. His body is slightly smaller than his head, with a soft innocent and gentle expression. Keep the character extremely cute, simple, clean, rounded, soft and minimal, matching the recognizable Chiikawa character aesthetic without adding unnecessary details. Preserve exactly the same character identity, face, proportions, blue-and-white markings, silhouette, line quality, palette and overall appearance across every animation state. Do not add clothing, hats, accessories, furniture, scenery, text, logos, UI elements, speech bubbles, decorative backgrounds, shadows, floor shadows, glow, smoke, speed lines, motion trails, or detached effects. The pet must be a complete full-body character centered inside the sprite frame and readable at small desktop-pet size. Use a clean pet-safe visual style with a flat chroma-key background for easy transparent extraction. Animation states: idle should show Hachiware standing calmly with subtle breathing, tiny blinking and gentle body movement; running-right should show Hachiware clearly moving toward the right with alternating small steps and consistent body identity; running-left should show the same character moving toward the left with matching proportions and cadence; waving should show Hachiware happily raising one small paw and waving through the paw position only, without wave marks or symbols; jumping should show Hachiware making a small cheerful vertical jump through body position only, without shadows or impact effects; failed should show Hachiware looking sad or disappointed with a cute teary expression while keeping all tears attached to the character; waiting should show Hachiware looking expectantly toward the user with a gentle asking or waiting pose; running should represent Hachiware actively working or thinking through a focused energetic pose rather than literal running, with small purposeful movements; review should show Hachiware carefully focused with a slight head tilt, attentive eyes and a gentle reviewing pose. Every state must remain the same Hachiware character and must not introduce a different animal, body type, costume, prop or visual style. Keep all poses compact enough for a 192x208 sprite cell.>" \
   --brand-discovery-file /absolute/path/to/brand-discovery.md \
   --brand-name "<optional researched brand name>" \
   --brand-brief "<optional compact researched brand cue sentence>" \
